@@ -19,7 +19,7 @@ function resetBackgroundColor() {
 	// Implement the function to reset background color
 	const body = document.querySelector("body");
 
-	body.style.backgroundColor = "#FFFFFF";
+	body.style.backgroundColor = "";
 }
 
 // Capture Keyboard Input
@@ -28,7 +28,7 @@ function resetBackgroundColor() {
 function displayKeyPress(event) {
 	// Implement the function to display key pressed
 	const keyPressDisplay = document.getElementById("keyPressDisplay");
-	keyPressDisplay.textContent = `"${event.key}" key pressed!`;
+	keyPressDisplay.textContent = `Key pressed: ${event.key}`;
 }
 
 // Process Text Input
@@ -36,9 +36,10 @@ function displayKeyPress(event) {
 // Function to display user input in real-time
 function displayUserInput() {
 	// Implement the function to display user input
+	const textInput = document.getElementById("textInput");
 	const textInputDisplay = document.getElementById("textInputDisplay");
 
-	textInputDisplay.textContent = event.target.value;
+	textInputDisplay.textContent = `You typed: ${textInput.value}`;
 }
 
 // Attach Event Listeners
